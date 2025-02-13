@@ -1,0 +1,83 @@
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.27
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[32m[+][0m URL: http://10.10.84.237/blog/ [10.10.84.237]
+[32m[+][0m Started: Thu Feb 13 17:35:20 2025
+
+Interesting Finding(s):
+
+[32m[+][0m XML-RPC seems to be enabled: http://10.10.84.237/blog/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner/
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access/
+
+[32m[+][0m WordPress readme found: http://10.10.84.237/blog/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m The external WP-Cron seems to be enabled: http://10.10.84.237/blog/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[32m[+][0m WordPress version 5.4.2 identified (Insecure, released on 2020-06-10).
+ | Found By: Atom Generator (Aggressive Detection)
+ |  - http://10.10.84.237/blog/index.php/feed/atom/, <generator uri="https://wordpress.org/" version="5.4.2">WordPress</generator>
+ | Confirmed By: Style Etag (Aggressive Detection)
+ |  - http://10.10.84.237/blog/wp-admin/load-styles.php, Match: '5.4.2'
+
+[34m[i][0m The main theme could not be detected.
+
+
+[34m[i][0m No plugins Found.
+
+
+[34m[i][0m No themes Found.
+
+
+[34m[i][0m No Timthumbs Found.
+
+
+[34m[i][0m No Config Backups Found.
+
+
+[34m[i][0m No DB Exports Found.
+
+
+[34m[i][0m No Medias Found.
+
+
+[34m[i][0m User(s) Identified:
+
+[32m[+][0m admin
+ | Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+ | Confirmed By: Login Error Messages (Aggressive Detection)
+
+[33m[!][0m No WPScan API Token given, as a result vulnerability data has not been output.
+[33m[!][0m You can get a free API token with 25 daily requests by registering at https://wpscan.com/register
+
+[32m[+][0m Finished: Thu Feb 13 17:37:23 2025
+[32m[+][0m Requests Done: 10890
+[32m[+][0m Cached Requests: 46
+[32m[+][0m Data Sent: 2.977 MB
+[32m[+][0m Data Received: 1.48 MB
+[32m[+][0m Memory used: 247.531 MB
+[32m[+][0m Elapsed time: 00:02:02
